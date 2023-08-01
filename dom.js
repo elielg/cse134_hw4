@@ -25,7 +25,7 @@ function init() {
 function walk() {
    let el;
 
-   el = document.getElementById('p1');
+   el = document.getElementById('root');
    showNode(el);
 
    el = el.firstChild;
@@ -59,7 +59,7 @@ function showNode(el) {
 }
 
 function modify() {
-    let el = document.getElementById('root');
+    let el = document.getElementById('p1');
 
     // You can do all the properties one by one if you know them in HTML
     el.title = 'I was changed by JS';
