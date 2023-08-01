@@ -30,23 +30,23 @@ function init() {
 function walk() {
     let el;
 
-    el = document.getElementById('p1');
-    showNode(el);
+    el = document.getElementById('root');
+    showNode(el,outputTextarea);
 
     el = el.firstChild;
-    showNode(el);
+    showNode(el,outputTextarea);
 
     el = el.nextSibling;
-    showNode(el);
+    showNode(el,outputTextarea);
 
     el = el.lastChild;
-    showNode(el);
+    showNode(el,outputTextarea);
 
     el = el.parentNode.parentNode.parentNode;
-    showNode(el);
+    showNode(el,outputTextarea);
 
     el = el.querySelector('section > *');
-    showNode(el);
+    showNode(el,outputTextarea);
 
 
 }
@@ -55,33 +55,32 @@ function adv_walk() {
     let el;
 
     el = document.getElementById('root');
-    showNode(el);
+    showNode(el,outputTextarea2);
 
     el = el.firstChild;
-    showNode(el);
+    showNode(el,outputTextarea2);
 
     el = el.nextSibling;
-    showNode(el);
+    showNode(el,outputTextarea2);
 
     el = el.lastChild;
-    showNode(el);
+    showNode(el,outputTextarea);
 
     el = el.parentNode.parentNode.parentNode;
-    showNode(el);
+    showNode(el,outputTextarea2);
 
     el = el.querySelector('section > *');
-    showNode(el);
+    showNode(el,outputTextarea2);
 }
 
-function showNode(el) {
-    let outputTextarea = document.getElementById('outputTextarea');
+function showNode(el,tArea) {
 
     let nodeType = el.nodeType;
     let nodeName = el.nodeName;
     let nodeValue = el.nodeValue;
 
-    outputTextarea.value += `Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}\n`;
-    outputTextarea.value += `\n`;
+    tArea.value += `Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}\n`;
+    tArea.value += `\n`;
     //alert(`Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}`);
 }
 
