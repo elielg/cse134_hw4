@@ -53,7 +53,7 @@ function showNode(el) {
     let nodeName = el.nodeName;
     let nodeValue = el.nodeValue;
 
-    outputTextarea.value+=`hello ${nodeType}`;
+    outputTextarea.value+=`Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}`;
     //alert(`Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}`);
 }
 
