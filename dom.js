@@ -59,7 +59,7 @@ function showNode(el) {
 }
 
 function modify() {
-    let el = document.getElementById('p1');
+    let el = document.getElementById('root');
 
     // You can do all the properties one by one if you know them in HTML
     el.title = 'I was changed by JS';
