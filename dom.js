@@ -6,6 +6,10 @@ function init() {
         walk();
     });
 
+    element.addEventListener('click',function(){
+        adv_walk();
+    })
+    
     element = document.getElementById('modifyBtn');
     element.addEventListener('click', function () {
         modify();
@@ -23,27 +27,49 @@ function init() {
 }
 
 function walk() {
-   let el;
+    let el;
 
-   el = document.getElementById('root');
-   showNode(el);
+    el = document.getElementById('p1');
+    showNode(el);
 
-   el = el.firstChild;
-   showNode(el);
+    el = el.firstChild;
+    showNode(el);
 
-   el = el.nextSibling;
-   showNode(el);
+    el = el.nextSibling;
+    showNode(el);
 
-   el = el.lastChild;
-   showNode(el);
+    el = el.lastChild;
+    showNode(el);
 
-   el = el.parentNode.parentNode.parentNode;
-   showNode(el);
+    el = el.parentNode.parentNode.parentNode;
+    showNode(el);
 
-   el = el.querySelector('section > *');
-   showNode(el);
+    el = el.querySelector('section > *');
+    showNode(el);
 
 
+}
+
+function adv_walk() {
+    let el;
+
+    el = document.getElementById('root');
+    showNode(el);
+
+    el = el.firstChild;
+    showNode(el);
+
+    el = el.nextSibling;
+    showNode(el);
+
+    el = el.lastChild;
+    showNode(el);
+
+    el = el.parentNode.parentNode.parentNode;
+    showNode(el);
+
+    el = el.querySelector('section > *');
+    showNode(el);
 }
 
 function showNode(el) {
@@ -53,8 +79,8 @@ function showNode(el) {
     let nodeName = el.nodeName;
     let nodeValue = el.nodeValue;
 
-    outputTextarea.value+=`Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}\n`;
-    outputTextarea.value+=`\n`;
+    outputTextarea.value += `Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}\n`;
+    outputTextarea.value += `\n`;
     //alert(`Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}`);
 }
 
@@ -108,7 +134,7 @@ function add() {
 }
 
 function remove() {
-  document.body.removeChild(document.body.lastChild);
+    document.body.removeChild(document.body.lastChild);
 }
 
 window.addEventListener('DOMContentLoaded', init);
