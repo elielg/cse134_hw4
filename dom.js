@@ -47,10 +47,13 @@ function walk() {
 }
 
 function showNode(el) {
+    let outputTextarea = document.getElementById('outputTextarea');
+
     let nodeType = el.nodeType;
     let nodeName = el.nodeName;
     let nodeValue = el.nodeValue;
 
+    outputTextarea+=nodeType;
     alert(`Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}`);
 }
 
