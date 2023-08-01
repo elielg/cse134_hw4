@@ -6,10 +6,11 @@ function init() {
         walk();
     });
 
+    element = document.getElementById('adv_walkBtn');
     element.addEventListener('click',function(){
         adv_walk();
     })
-    
+
     element = document.getElementById('modifyBtn');
     element.addEventListener('click', function () {
         modify();
